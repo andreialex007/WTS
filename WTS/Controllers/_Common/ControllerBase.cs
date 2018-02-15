@@ -28,7 +28,4 @@ namespace WTS.Controllers._Common
             Service = new AppService(appDbContext);
         } 
     }
-
-
-
 }

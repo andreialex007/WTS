@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using WTS.DL.Entities;
@@ -22,9 +19,17 @@ namespace WTS.DL
         {
 
         }
-
-
+                    
         public DbSet<User> Users { get; set; }
+
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Unit> Units { get; set; }
+        public DbSet<Invoice> Invoices { get; set; }
+        public DbSet<InvoiceLine> InvoiceLines { get; set; }
+        
+        public DbSet<Store> Stores { get; set; }
+        public DbSet<Supplier> Suppliers { get; set; }
+        public DbSet<Warehouse> Warehouses { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

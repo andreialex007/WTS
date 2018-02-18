@@ -35,5 +35,6 @@ module.exports = {
     historyApiFallback: {
       index: 'index.html'
     }
-  }
+  },
+  devtool: 'eval-source-map'
 };

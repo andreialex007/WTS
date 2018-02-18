@@ -1,5 +1,4 @@
 const webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -14,11 +13,8 @@ module.exports = {
         use: ['babel-loader']
       },
       {
-        test: /\.(scss|css)$/, use: [
-          'style-loader',
-          { loader: 'css-loader', options: { sourceMap: true } },
-          { loader: 'sass-loader', options: { sourceMap: true, outputStyle: 'compressed' } },
-        ]
+        test: /\.(s*)css$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
       }
     ]
   },

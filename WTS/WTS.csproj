@@ -7,7 +7,6 @@
   <ItemGroup>
     <Folder Include="wwwroot\images\" />
     <Folder Include="wwwroot\fonts\" />
-    <Folder Include="wwwroot\scripts\users\" />
     <Folder Include="wwwroot\scripts\_common\" />
   </ItemGroup>
 

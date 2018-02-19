@@ -6,6 +6,10 @@ class Login extends React.Component {
         super(props);
     }
 
+    login() {
+        console.log("login");
+    }
+
     render() {
 
         return (
@@ -37,7 +41,7 @@ class Login extends React.Component {
                                         </label>
                                     </div>
                                 </div>
-                                <a className="btn btn-primary btn-block" href="javascript:;">Login</a>
+                                <a className="btn btn-primary btn-block" onClick={() => this.login()} href="javascript:;">Login</a>
                             </form>
                         </div>
                     </div>

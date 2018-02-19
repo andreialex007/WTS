@@ -58,15 +58,13 @@ class App extends React.Component {
                             </li>
                         </ul>
                         <ul className="navbar-nav ml-auto">
-
-
                             <li className="nav-item">
                                 <span className="navbar-brand user-navabar-brand" >
                                     <i className="fa fa-fw fa-address-book"></i> Admin
                                 </span>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" data-toggle="modal" data-target="#exampleModal">
+                                <a className="nav-link" data-toggle="modal" >
                                     <i className="fa fa-fw fa-sign-out"></i>Logout
                                 </a>
                             </li>

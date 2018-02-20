@@ -1,15 +1,19 @@
 ﻿import React from 'react';
 
 
-const todos = (state = [], action) => {
+const login = (state = {
+    title: "Login"
+}, action) => {
     switch (action.type) {
-    case 'ADD_TODO':
-        return [
-            ...state
-        ];
-    default:
-        return state;
+        case 'LOGIN_USER':
+            console.log("try login");
+            return {
+                ...state,
+                title: action.payload.title
+            };
+        default:
+            return state;
     }
 }
 
-export default todos
+export { login };

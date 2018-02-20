@@ -1,6 +1,6 @@
 ﻿import React from 'react';
-import bootstrapStyles from './../styles/bootstrap-4.css';
-import styles from './../styles/common.scss';
+import './../styles/bootstrap-4.css';
+import './../styles/common.scss';
 import { Route, NavLink, BrowserRouter, Router, Link, withRouter } from "react-router-dom";
 import Home from './home';
 import Users from './users/users.jsx';

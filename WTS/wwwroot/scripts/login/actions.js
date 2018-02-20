@@ -1,11 +1,7 @@
 ﻿
-export const Login = (username, password, rememberMe) => {
+export const login = (payload) => {
     return {
         type: "LOGIN_USER",
-        payload: {
-            username,
-            password,
-            rememberMe
-        }
+        payload: payload
     };
-};
+};  

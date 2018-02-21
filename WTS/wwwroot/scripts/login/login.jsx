@@ -7,10 +7,21 @@ import { login } from './actions';
 class Login extends React.Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            username: "",
+            password: "",
+            rememberMe: false
+        };
     }
 
     login() {
-        this.props.login({ title: 'Another login' });
+        //this.props.login({ title: 'Another login' });
+        console.log(this.state);
+    }
+
+    onChange(event) {
+        this.setState({ ...this.state, [event.target.name]: event.target.value });
     }
 
     render() {
@@ -19,28 +30,37 @@ class Login extends React.Component {
             <div>
                 <div className="container">
                     <div className="card card-login mx-auto mt-5">
-                        <div className="card-header">{this.props.title}</div>
+                        <div className="card-header">Login</div>
                         <div className="card-body">
                             <form>
                                 <div className="form-group">
                                     <label >Email address</label>
                                     <input className="form-control"
-                                        id="exampleInputEmail1"
-                                        type="email"
+                                        type="text"
+                                        name="username"
+                                        value={this.state.username}
+                                        onChange={(event) => this.onChange(event)}
                                         aria-describedby="emailHelp"
                                         placeholder="Enter email" />
                                 </div>
                                 <div className="form-group">
                                     <label >Password</label>
                                     <input className="form-control"
-                                        id="exampleInputPassword1"
                                         type="password"
+                                        name="password"
+                                        value={this.state.password}
+                                        onChange={(event) => this.onChange(event)}
                                         placeholder="Password" />
                                 </div>
                                 <div className="form-group">
                                     <div className="form-check">
                                         <label className="form-check-label">
-                                            <input className="form-check-input" type="checkbox" /> Remember me
+                                            <input className="form-check-input"
+                                                checked={this.state.rememberMe}
+                                                name="rememberMe"
+                                                value="true"
+                                                onChange={(event) => this.onChange(event)}
+                                                type="checkbox" /> Remember me
                                         </label>
                                     </div>
                                 </div>
@@ -56,7 +76,11 @@ class Login extends React.Component {
 
 
 export default
-    connect((state, ownProps) => ({ title: state.login.title }),
+    connect((state, ownProps) => ({
+        username: state.login.username,
+        password: state.login.password,
+        rememberMe: state.login.rememberMe
+    }),
         {
             login
         })(withRouter(Login));

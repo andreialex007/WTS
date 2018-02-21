@@ -1,7 +1,4 @@
-﻿
-export const login = (payload) => {
-    return {
-        type: "LOGIN_USER",
-        payload: payload
-    };
-};  
+﻿import { action } from './../utils';
+
+
+export const login = (payload) => action("LOGIN_USER", payload); 

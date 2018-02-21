@@ -46,6 +46,7 @@
     "react-router-dom": "^4.2.2",
     "react-style-loader": "^2.3.0",
     "redux": "^3.7.2",
+    "redux-create-action-types": "^2.1.0",
     "url-loader": "^0.6.2"
   }
 }

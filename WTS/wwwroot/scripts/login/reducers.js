@@ -2,8 +2,11 @@
 
 
 const login = (state = {
-    title: "Login"
-}, action) => {
+    username: "",
+    password: "",
+    rememberMe: false
+},
+    action) => {
     switch (action.type) {
         case 'LOGIN_USER':
             console.log("try login");
